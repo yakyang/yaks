@@ -1,5 +1,11 @@
 Manifest-Version: 1.0
-Built-By: yangkai
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: yak-order
+Implementation-Version: 1.0
+Implementation-Vendor-Id: yak.order
 Build-Jdk: 1.7.0_45
+Built-By: yak
 Created-By: Maven Integration for Eclipse
+Implementation-URL: http://projects.spring.io/spring-boot/yak/yak-orde
+ r/
 
