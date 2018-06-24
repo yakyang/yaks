@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dudu.ops.manager.notice.dao.INoticeManagerDao">
+	<resultMap id="NoticeManagerList" type="yak.manager.notice.NoticeManager">
+        <id column="notice_id" property="noticeId" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="type" property="type" />
+        <result column="file_download_url" property="fileDownloadUrl" />
+        <result column="file_name" property="fileName" />
+        <result column="file_oss_key" property="fileOssKey" />
+        <result column="releaser" property="releaser" />
+        <result column="release_time" property="releaseTime" />
+        <result column="status" property="status" />
+        <result column="creater" property="creater" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="modifier" property="modifier" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="comments" property="comments" />
+    </resultMap>
+	
+	<insert id="save" useGeneratedKeys="true" keyProperty="noticeid" parameterType="yak.manager.notice.NoticeManager">
+		insert into base_notice(
+		        notice_id, 
+		        title,
+		        content,
+		        `type`,
+		        file_download_url,
+		        file_name,
+		        file_oss_key,
+		        releaser,
+		        release_time,
+		        `status`,
+		        creater,
+		        create_time,
+		        modifier,
+		        modify_time,
+		        comments
+		)  values (
+		        #{noticeId},
+		        #{title},
+		        #{content},
+		        #{type},
+		        #{fileDownloadUrl},
+		        #{fileName},
+		        #{fileOssKey},
+		        #{releaser},
+		        #{releaseTime},
+		        #{status},
+		        #{creater},
+		        #{createTime},
+		        #{modifier},
+		        #{modifyTime},
+		        #{comments}
+		)
+	</insert>
+	
+	<update id="deleteNoticeManager" parameterType="int">
+	  	update base_notice 
+		set `status`="NOTICE_DELETE"
+		where notice_id = #{noticeId}
+	</update>
+	
+	<update id="editNoticeManager">
+		update base_notice 
+		set title=#{title}, content=#{content}, type=#{type}, file_download_url=#{fileDownloadUrl}, file_name=#{fileName},
+			releaser=#{releaser}, release_time=#{releaseTime}, `status`=#{status},
+			modifier=#{modifier}, modify_time=#{modifyTime}, comments=#{comments}
+		where notice_id = #{noticeId}
+	</update>
+	
+	<select id="queryNoticeManager" resultMap="NoticeManagerList" parameterType="yak.manager.notice.NoticeManager">
+	  select notice_id, 
+	         title,
+	         type,
+	         releaser,
+	         release_time,
+	         status,
+	         create_time,
+	         modify_time
+	  from base_notice
+	  where 1 = 1
+	  <if test="title != null and title != ''">
+			AND title like "%"#{title}"%"  
+	  </if>
+	  <if test="status != null and status.size > 0">
+			AND status in
+			<foreach collection="status"  open="(" item="statusItem" close=")" separator=",">
+				#{statusItem}
+			</foreach>
+	  </if>
+	  <if test="type != null and type.size > 0">
+			AND type in
+			<foreach collection="type"  open="(" item="typeItem" close=")" separator=",">
+				#{typeItem}
+			</foreach>
+	  </if>
+	</select>
+	
+	<select id="queryReleaseNotice" resultMap="NoticeManagerList" parameterType="yak.manager.notice.NoticeManager">
+	  select notice_id, 
+	         title,
+	         type,
+	         content,
+	         file_download_url,
+	         file_name,
+	         releaser,
+	         release_time,
+	         status,
+	         create_time,
+	         modify_time
+	  from base_notice
+	  where status = "NOTICE_RELEASE"
+	  <if test="title != null and title != ''">
+			AND title like "%"#{title}"%"  
+	  </if>
+	  <if test="status != null and status.size > 0">
+			AND status in
+			<foreach collection="status"  open="(" item="statusItem" close=")" separator=",">
+				#{statusItem}
+			</foreach>
+	  </if>
+	  <if test="type != null and type.size > 0">
+			AND type in
+			<foreach collection="type"  open="(" item="typeItem" close=")" separator=",">
+				#{typeItem}
+			</foreach>
+	  </if>
+	  order by release_time desc
+	</select>
+	
+	<select id="queryNoticeManagerById" resultMap="NoticeManagerList">
+	  	select  notice_id, 
+		        title,
+		        content,
+		        `type`,
+		        file_download_url,
+		        file_name,
+		        file_oss_key,
+		        releaser,
+		        release_time,
+		        `status`,
+		        creater,
+		        create_time,
+		        modifier,
+		        modify_time,
+		        comments
+	  	from base_notice
+	 	where notice_id = #{noticeId}
+	</select>
+	
+	<update id="releaseNotice">
+		update base_notice 
+		set `status`="NOTICE_RELEASE", release_time=now()
+		where notice_id = #{noticeId}
+		
+	</update>
+	
+	<update id="invalidNotice">
+		update base_notice 
+		set `status`= "NOTICE_INVALID"
+		where notice_id = #{noticeId}
+	</update>
+</mapper>
