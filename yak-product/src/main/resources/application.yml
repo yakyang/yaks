@@ -50,6 +50,6 @@ pagehelper:
 
 # LOGGING
 logging:
-    file: D://logs/yak-manager.log
+    file: ../../yak-product.log
     level:
-       yak.manager: INFO
+       yak.product: INFO
