@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @EntityScan({"yak.manager"})
 public class YakManagerApplication {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(YakManagerApplication.class, args);
 	}

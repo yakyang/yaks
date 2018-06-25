@@ -1,6 +1,6 @@
 spring:
   application:
-    name: dudu-manager
+    name: yak-manager
   profiles:
     active: dev
 ---

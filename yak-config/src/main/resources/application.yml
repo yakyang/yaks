@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: yak-config
+  profiles:
+    active: localhost
+logging:
+    file: ../logs/${spring.application.name}.log
+---
+spring:
+  profiles: localhost
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git.yonyoutelecom.cn/duducloud/config-repository.git
+          username: ${config.username:ningyi}
+          password: ${config.password:12345678}
+
+server:
+  port: 8888
+  maxHttpHeaderSize: 8192
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
