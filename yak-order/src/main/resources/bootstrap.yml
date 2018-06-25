@@ -1,0 +1,103 @@
+spring:
+  application:
+    name: dudu-manager
+  profiles:
+    active: dev
+---
+spring:
+  profiles: localhost
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: dudu-config
+        name: dudu-manager
+        profile: ${config.profile:localhost}
+eureka:
+  instance:
+    hostname: localhost
+    metadata-map:
+          zone: ${eureka.zone:localhost}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: dev
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: dudu-config
+        name: dudu-manager
+        profile: ${config.profile:dev}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://172.20.8.242:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: ${spring.cloud.client.ipAddress}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+
+# 测试环境 172.20.8.242 
+# 动态读取本地环境 ${spring.cloud.client.ipAddress}
+---
+spring:
+  profiles: test
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: dudu-config
+        name: dudu-manager
+        profile: ${config.profile:test}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${eureka.url:http://172.20.8.242:8761/eureka/}
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: ${eureka.zone:test}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+---
+spring:
+  profiles: sanbox
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: dudu-config
+        name: dudu-manager
+        profile: ${config.profile:sanbox}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: ${eureka.zone:sanbox}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+---
+spring:
+  profiles: pro
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: dudu-config
+        name: dudu-manager
+        profile: ${config.profile:pro}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.90:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: ${eureka.zone:pro}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+

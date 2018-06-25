@@ -1,0 +1,149 @@
+2018-06-25 08:51:03.739  INFO 9820 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://172.20.8.242:8888/
+2018-06-25 08:51:04.184  INFO 9820 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=dudu-manager, profiles=[dev], label=null, version=da370aca638b874c264e2bbaf9d6f563ab31699f, state=null
+2018-06-25 08:51:04.185  INFO 9820 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient']]]
+2018-06-25 08:51:04.350  INFO 9820 --- [main] yak.manager.dao.NoticeDaoTest            : The following profiles are active: dev
+2018-06-25 08:51:04.361  INFO 9820 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@548e9b2d: startup date [Mon Jun 25 08:51:04 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@52bd93d3
+2018-06-25 08:51:05.789  WARN 9820 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-06-25 08:51:06.055  INFO 9820 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a9cf8d81-7c52-3480-a423-9f1ed5b86568
+2018-06-25 08:51:06.153  INFO 9820 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-25 08:51:06.397  INFO 9820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e39c52b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 08:51:06.466  INFO 9820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ffb655ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 08:51:07.913  INFO 9820 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@548e9b2d: startup date [Mon Jun 25 08:51:04 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@52bd93d3
+2018-06-25 08:51:08.062  INFO 9820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-25 08:51:08.064  INFO 9820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-25 08:51:08.229  INFO 9820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 08:51:08.229  INFO 9820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 08:51:08.408  INFO 9820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 08:51:10.591  WARN 9820 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 08:51:10.592  INFO 9820 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 08:51:10.617  WARN 9820 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 08:51:10.617  INFO 9820 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 08:51:10.694  INFO 9820 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 08:51:10.728  INFO 9820 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 08:51:11.493  INFO 9820 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-06-25 08:51:11.525  INFO 9820 --- [main] yak.manager.dao.NoticeDaoTest            : Started NoticeDaoTest in 13.624 seconds (JVM running for 15.022)
+2018-06-25 08:51:11.635  INFO 9820 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@548e9b2d: startup date [Mon Jun 25 08:51:04 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@52bd93d3
+2018-06-25 08:51:11.652  INFO 9820 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-06-25 08:51:11.683  INFO 9820 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 08:51:11.719  INFO 9820 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-06-25 08:51:11.720  INFO 9820 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-06-25 08:51:11.720  INFO 9820 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-06-25 08:51:11.720  INFO 9820 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-06-25 08:51:11.881  INFO 9820 --- [Thread-6] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-06-25 08:51:11.884  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-06-25 08:51:11.884  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-06-25 08:51:11.884  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-06-25 08:51:11.885  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-06-25 08:51:11.885  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-06-25 08:51:11.885  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-06-25 08:51:11.885  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-06-25 08:51:11.919  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-06-25 08:51:11.921  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-06-25 08:51:11.925  INFO 9820 --- [Thread-6] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-06-25 08:51:11.929  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1529887871929 with initial instances count: 7
+2018-06-25 08:51:12.020  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 08:51:12.021  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2018-06-25 08:51:12.037  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DUDU-MANAGER/10.6.223.67:-1:(10.6.223.67) - deregister  status: 404
+2018-06-25 08:51:12.066  INFO 9820 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 08:51:12.068  INFO 9820 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 08:51:12.069  INFO 9820 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-25 09:04:24.525  INFO 1196 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://172.20.8.242:8888/
+2018-06-25 09:04:24.884  INFO 1196 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=dudu-manager, profiles=[dev], label=null, version=da370aca638b874c264e2bbaf9d6f563ab31699f, state=null
+2018-06-25 09:04:24.885  INFO 1196 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient']]]
+2018-06-25 09:04:25.033  INFO 1196 --- [main] yak.manager.dao.NoticeDaoTest            : The following profiles are active: dev
+2018-06-25 09:04:25.045  INFO 1196 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7b921c57: startup date [Mon Jun 25 09:04:25 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76b51252
+2018-06-25 09:04:26.624  WARN 1196 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-06-25 09:04:26.915  INFO 1196 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a9cf8d81-7c52-3480-a423-9f1ed5b86568
+2018-06-25 09:04:26.999  INFO 1196 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-25 09:04:27.210  INFO 1196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9dfd41e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 09:04:27.301  INFO 1196 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ba1744dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 09:04:28.825  INFO 1196 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7b921c57: startup date [Mon Jun 25 09:04:25 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76b51252
+2018-06-25 09:04:29.099  INFO 1196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-25 09:04:29.101  INFO 1196 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-25 09:04:29.260  INFO 1196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:04:29.260  INFO 1196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:04:29.433  INFO 1196 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:04:31.483  WARN 1196 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 09:04:31.484  INFO 1196 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 09:04:31.500  WARN 1196 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 09:04:31.500  INFO 1196 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 09:04:31.551  INFO 1196 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 09:04:31.567  INFO 1196 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 09:04:32.324  INFO 1196 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-06-25 09:04:32.358  INFO 1196 --- [main] yak.manager.dao.NoticeDaoTest            : Started NoticeDaoTest in 14.339 seconds (JVM running for 15.723)
+2018-06-25 09:04:32.557  INFO 1196 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7b921c57: startup date [Mon Jun 25 09:04:25 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@76b51252
+2018-06-25 09:04:32.575  INFO 1196 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-06-25 09:04:32.603  INFO 1196 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 09:04:32.638  INFO 1196 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-06-25 09:04:32.638  INFO 1196 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-06-25 09:04:32.638  INFO 1196 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-06-25 09:04:32.639  INFO 1196 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-06-25 09:04:32.891  INFO 1196 --- [Thread-6] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-06-25 09:04:32.895  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-06-25 09:04:32.895  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-06-25 09:04:32.895  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-06-25 09:04:32.896  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-06-25 09:04:32.896  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-06-25 09:04:32.896  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-06-25 09:04:32.896  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-06-25 09:04:32.931  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-06-25 09:04:32.935  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-06-25 09:04:32.941  INFO 1196 --- [Thread-6] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-06-25 09:04:32.947  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1529888672947 with initial instances count: 7
+2018-06-25 09:04:33.051  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 09:04:33.052  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2018-06-25 09:04:33.072  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DUDU-MANAGER/10.6.223.67:-1:(10.6.223.67) - deregister  status: 404
+2018-06-25 09:04:33.114  INFO 1196 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 09:04:33.116  INFO 1196 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 09:04:33.118  INFO 1196 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-25 09:05:32.585  INFO 6760 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://172.20.8.242:8888/
+2018-06-25 09:05:33.002  INFO 6760 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=dudu-manager, profiles=[dev], label=null, version=da370aca638b874c264e2bbaf9d6f563ab31699f, state=null
+2018-06-25 09:05:33.003  INFO 6760 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient']]]
+2018-06-25 09:05:33.169  INFO 6760 --- [main] yak.manager.dao.NoticeDaoTest            : The following profiles are active: dev
+2018-06-25 09:05:33.182  INFO 6760 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@13c4c955: startup date [Mon Jun 25 09:05:33 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@61d9ae77
+2018-06-25 09:05:34.685  WARN 6760 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-06-25 09:05:34.956  INFO 6760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a9cf8d81-7c52-3480-a423-9f1ed5b86568
+2018-06-25 09:05:35.055  INFO 6760 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-25 09:05:35.260  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3317b367] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 09:05:35.356  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4f31b664] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-25 09:05:36.850  INFO 6760 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@13c4c955: startup date [Mon Jun 25 09:05:33 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@61d9ae77
+2018-06-25 09:05:37.089  INFO 6760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-25 09:05:37.092  INFO 6760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-25 09:05:37.252  INFO 6760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:05:37.253  INFO 6760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:05:37.394  INFO 6760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-25 09:05:39.471  WARN 6760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 09:05:39.471  INFO 6760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 09:05:39.481  WARN 6760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-25 09:05:39.481  INFO 6760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-06-25 09:05:39.523  INFO 6760 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 09:05:39.539  INFO 6760 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 09:05:40.032  INFO 6760 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-06-25 09:05:40.063  INFO 6760 --- [main] yak.manager.dao.NoticeDaoTest            : Started NoticeDaoTest in 13.699 seconds (JVM running for 15.126)
+2018-06-25 09:05:40.279  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-06-25 09:05:40.662  INFO 6760 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@13c4c955: startup date [Mon Jun 25 09:05:33 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@61d9ae77
+2018-06-25 09:05:40.672  INFO 6760 --- [Thread-6] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-06-25 09:05:40.690  INFO 6760 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 09:05:40.706  INFO 6760 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-06-25 09:05:40.707  INFO 6760 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-06-25 09:05:40.707  INFO 6760 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-06-25 09:05:40.707  INFO 6760 --- [Thread-6] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-06-25 09:05:40.846  INFO 6760 --- [Thread-6] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-06-25 09:05:40.848  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-06-25 09:05:40.849  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-06-25 09:05:40.849  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-06-25 09:05:40.849  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-06-25 09:05:40.849  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-06-25 09:05:40.849  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-06-25 09:05:40.850  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-06-25 09:05:40.879  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-06-25 09:05:40.880  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-06-25 09:05:40.883  INFO 6760 --- [Thread-6] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-06-25 09:05:40.887  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1529888740887 with initial instances count: 7
+2018-06-25 09:05:40.944  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-06-25 09:05:40.945  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2018-06-25 09:05:41.010  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DUDU-MANAGER/10.6.223.67:-1:(10.6.223.67) - deregister  status: 404
+2018-06-25 09:05:41.034  INFO 6760 --- [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-06-25 09:05:41.035  INFO 6760 --- [Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application dudu-manager with eureka with status DOWN
+2018-06-25 09:05:41.037  INFO 6760 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-25 09:05:41.046  INFO 6760 --- [Thread-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

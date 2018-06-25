@@ -15,8 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EntityScan({"dudu.ops.manager"})
-//@MapperScan(basePackages = "dudu.ops.manager")
+@EntityScan({"yak.manager"})
 public class YakManagerApplication {
 
 	public static void main(String[] args) {
