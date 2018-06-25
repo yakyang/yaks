@@ -41,8 +41,7 @@ mybatis:
     mapper-locations: classpath:/mappings/*.xml
     type-aliases-package: yak.managerger
     configuration.mapUnderscoreToCamelCase: true
-    #configLocation: classpath:/mybatis-config.xml
-      
+    
 pagehelper:
     helperDialect: mysql
     reasonable: true

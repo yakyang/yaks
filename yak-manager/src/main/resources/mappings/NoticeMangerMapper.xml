@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="dudu.ops.manager.notice.dao.INoticeManagerDao">
+<mapper namespace="yak.manager.notice.INoticeManagerDao">
 	<resultMap id="NoticeManagerList" type="yak.manager.notice.NoticeManager">
         <id column="notice_id" property="noticeId" />
         <result column="title" property="title" />
