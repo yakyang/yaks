@@ -50,6 +50,6 @@ pagehelper:
 
 # LOGGING
 logging:
-    file: ${spring.application.name}.log
+    file: D://logs/yak-manager.log
     level:
        yak.manager: INFO
