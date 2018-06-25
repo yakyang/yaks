@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: dudu-discovery
+  profiles:
+    active: localhost
+# LOGGING
+logging:
+    file: ../logs/${spring.application.name}.log
+    level:
+      root: WARN
+---
+spring:
+  profiles: localhost
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+---
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  environment: test
+  instance:
+    hostname: peer1
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+  client:
+    serviceUrl:
+      defaultZone: http://peer2:8761/eureka/
+---
+spring:
+  profiles: peer2
+server:
+  port: 8761
+eureka:
+  environment: test
+  instance:
+    hostname: peer2
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+
