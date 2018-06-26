@@ -2,19 +2,17 @@ spring:
   application:
     name: yak-config
   profiles:
-    active: localhost
-logging:
-    file: ../../logs/${spring.application.name}.log
+    active: pro
 ---
 spring:
-  profiles: localhost
+  profiles: pro
   cloud:
     config:
       server:
         git:
-          uri: http://git.yonyoutelecom.cn/duducloud/config-repository.git
-          username: ${config.username:ningyi}
-          password: ${config.password:12345678}
+          uri: http://git.yonyoutelecom.cn/duducloud/yak-config.git
+          username: ${config.username:yangkaic@yonyou.com}
+          password: ${config.password:yakyang2118}
 
 server:
   port: 8888
@@ -23,8 +21,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
   client:
     serviceUrl:
-      defaultZone: http://localhost:8711/eureka/
+      defaultZone: http://${spring.cloud.client.ipAddress}:8711/eureka/
 
