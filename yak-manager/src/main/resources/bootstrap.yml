@@ -13,10 +13,15 @@ spring:
            service-id: yak-config
         name: yak-manager
         profile: ${config.profile:pro}
+        
 eureka:
   client:
     service-url:
+<<<<<<< HEAD
       defaultZone: http://123.57.145.164:8711/eureka/
+=======
+      defaultZone: http://${spring.cloud.client.ipAddress}:8711/eureka/
+>>>>>>> origin/master
   instance:
     prefer-ip-address: true
     metadata-map:
