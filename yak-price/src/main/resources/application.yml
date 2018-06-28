@@ -1,6 +1,6 @@
 # Server settings
 server:
-    port: 8084
+    port: 8082
 
 # SPRING PROFILES
 spring:
@@ -50,6 +50,6 @@ pagehelper:
 
 # LOGGING
 logging:
-    file: ../../logs/yak-order.log
+    file: ../../logs/yak-price.log
     level:
-       yak.order: INFO
+       yak.price: INFO

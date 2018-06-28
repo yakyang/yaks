@@ -28,7 +28,7 @@
 		<module>yak-eureka</module>
 		<module>yak-config</module>
 		<module>yak-manager</module>
-		<module>yak-order</module>
+		<module>yak-price</module>
 		<module>yak-product</module>
 	</modules>
 

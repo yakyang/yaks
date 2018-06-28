@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: yak-price
+  profiles:
+    active: pro
+---
+spring:
+  profiles: pro
+  cloud:
+      config:
+        discovery:
+           enabled: true
+           service-id: yak-config
+        name: yak-price
+        profile: ${config.profile:pro}
+        
+eureka:
+  client:
+    service-url:
+      defaultZone: http://123.57.145.164:8711/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: ${eureka.zone:pro}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:(${eureka.instance.metadata-map.zone})
+

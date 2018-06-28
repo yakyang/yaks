@@ -1,4 +1,4 @@
-package yak.order;
+package yak.price;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,11 +15,11 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EntityScan({"yak.order"})
-public class YakOrderApplication {
-
+@EntityScan({"yak.manager"})
+public class YakPriceApplication {
+	
 	public static void main(String[] args) {
-		SpringApplication.run(YakOrderApplication.class, args);
+		SpringApplication.run(YakPriceApplication.class, args);
 	}
 
 	@Bean
