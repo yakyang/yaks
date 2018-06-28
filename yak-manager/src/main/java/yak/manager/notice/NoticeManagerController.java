@@ -25,7 +25,7 @@ public class NoticeManagerController {
 	 * @date 2018-05-30
 	 */
 	@ResponseBody
-	@RequestMapping(value="queryById", method=RequestMethod.POST)
+	@RequestMapping(value="queryById", method=RequestMethod.GET)
 	public Result<NoticeManager> queryById(Integer noticeId) {
 		NoticeManager noticeManager = null;
 		try {
