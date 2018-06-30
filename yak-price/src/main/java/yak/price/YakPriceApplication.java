@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EntityScan({"yak.manager"})
+@EntityScan({"yak.price"})
 public class YakPriceApplication {
 	
 	public static void main(String[] args) {

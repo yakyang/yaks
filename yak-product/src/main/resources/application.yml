@@ -39,7 +39,7 @@ redis:
 # MyBatis
 mybatis:
     mapper-locations: classpath:/mappings/*.xml
-    type-aliases-package: yak.managerger
+    type-aliases-package: yak.product
     configuration.mapUnderscoreToCamelCase: true
     
 pagehelper:
