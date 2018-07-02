@@ -20,6 +20,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<version>${mybatis.spring.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.29</version>
