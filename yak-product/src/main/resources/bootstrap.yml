@@ -8,12 +8,9 @@ spring:
   profiles: pro
   cloud:
       config:
-        discovery:
-           enabled: true
-           service-id: yak-config
-        name: yak-product
-        profile: ${config.profile:pro}
-        
+        profile: pro
+        uri: http://123.57.145.164:8888/
+
 eureka:
   client:
     service-url:
