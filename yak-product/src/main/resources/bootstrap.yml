@@ -3,14 +3,10 @@ spring:
     name: yak-product
   profiles:
     active: pro
----
-spring:
-  profiles: pro
   cloud:
-      config:
-        profile: pro
-        uri: http://123.57.145.164:8888/
-
+    config:
+      profile: pro
+      uri: http://123.57.145.164:8888/
 eureka:
   client:
     service-url:
